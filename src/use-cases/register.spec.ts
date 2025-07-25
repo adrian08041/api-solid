@@ -1,5 +1,5 @@
 import { compare } from "bcryptjs";
-import { expect, describe, it } from "vitest";
+import { expect, describe, it, beforeEach } from "vitest";
 import { RegisterUseCase } from "./register";
 
 describe("Register Use Case", () => {
