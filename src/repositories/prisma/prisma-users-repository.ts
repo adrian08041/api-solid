@@ -18,4 +18,3 @@ export class PrismaUsersRepository implements UsersRepository {
     return user;
   }
 }
-

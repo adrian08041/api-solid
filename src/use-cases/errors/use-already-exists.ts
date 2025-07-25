@@ -3,4 +3,3 @@ export class UserAlreadyExistsError extends Error {
     super("E-mail already exists");
   }
 }
-
