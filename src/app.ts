@@ -1,12 +1,23 @@
 import fastify from "fastify";
 
-import { appRoutes } from "./http/routes";
 import { ZodError } from "zod";
-import { env } from "process";
+
+import fastifyJwt from "@fastify/jwt";
+import { env } from ".";
+
+import { gymsRoutes } from "./http/controllers/gyms/route";
+import { usersRoutes } from "./http/controllers/users/routes";
+import { checkInsRoutes } from "./http/controllers/check-ins/routes";
 
 export const app = fastify();
 
-app.register(appRoutes);
+app.register(fastifyJwt, {
+  secret: env.JWT_SECRET,
+});
+
+app.register(usersRoutes);
+app.register(gymsRoutes);
+app.register(checkInsRoutes);
 
 app.setErrorHandler((error, request, reply) => {
   if (error instanceof ZodError) {
@@ -23,3 +34,5 @@ app.setErrorHandler((error, request, reply) => {
     message: "Internal server error",
   });
 });
+
+

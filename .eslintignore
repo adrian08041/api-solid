@@ -2,3 +2,5 @@ node_modules
 build
 src
 vite.config.ts
+vitest.setup.ts
+prisma
