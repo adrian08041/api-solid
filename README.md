@@ -188,7 +188,7 @@ Authorization: Bearer SEU_REFRESH_TOKEN
   Authorization: Bearer SEU_TOKEN
 ```
 
-###🔹 Criar academia (admin)
+### 🔹 Criar academia (admin)
 
 ```
 POST /gyms
