@@ -126,7 +126,7 @@ A API estará disponível em http://localhost:3333.
 | GET    | `/gyms/search` | Buscar academias por nome                      | ❌    |
 | GET    | `/gyms/nearby` | Listar academias próximas da localização atual | ❌    |
 
-###📍 Check-ins (/check-ins)
+### 📍 Check-ins (/check-ins)
 
 - Todas as rotas abaixo exigem autenticação JWT.
 
